@@ -50,7 +50,7 @@ jobs:
           Write-Host "  Password     : M@hb0d#123456789" -ForegroundColor Yellow
           Write-Host "  >> Open mstsc and connect to: $ts_ip" -ForegroundColor Magenta
           Write-Host "==================================================" -ForegroundColor Green
-
+      
       - name: 4. Update Cloudflare DNS with Tailscale IP
           $ErrorActionPreference = "Stop"
           $recordName = "tailscale.soda-sharj.ir"
