@@ -2,6 +2,9 @@
 name: Ubuntu Tailscale Exit Node
 
 on:
+  schedule:
+    - cron: '03 6,12,18,0 * * *'
+      timezone: 'Asia/Tehran'
   workflow_dispatch:
 
 permissions:
@@ -10,7 +13,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-24.04
-    timeout-minutes: 360
+    timeout-minutes: 359
 
     steps:
       - name: 1. Prepare Ubuntu
@@ -52,7 +55,7 @@ jobs:
 
           sudo tailscale up \
             --auth-key="$TAILSCALE_AUTHKEY" \
-            --hostname="ghand1" \
+            --hostname="ghand2" \
             --advertise-exit-node
 
           echo "Waiting for Tailscale connection..."
