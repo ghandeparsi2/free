@@ -2,9 +2,6 @@
 name: Ubuntu Tailscale Exit Node
 
 on:
-  schedule:
-    - cron: '03 6,12,18,0 * * *'
-      timezone: 'Asia/Tehran'
   workflow_dispatch:
 
 permissions:
